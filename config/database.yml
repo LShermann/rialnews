@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['postgres://mysite:Q38HVh3ep5g8e6DHtlJuar4C3onCXcgN@dpg-cinmp8dgkuvudi9h2ih0-a/mysite_iycv'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -55,9 +55,9 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+#test:
+#  <<: *default
+#  url: <%= ENV['DATABASE_URL'] %>
   #database: Rialnews_test
   #username: userdb
   # The password associated with the postgres role (username).
@@ -81,8 +81,8 @@ test:
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
 #
-   production:
-     url: <%= ENV['DATABASE_URL'] %>
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
